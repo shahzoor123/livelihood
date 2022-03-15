@@ -7,11 +7,11 @@ def index(request):
 
 
 def login(request):
-    return render(request, 'dashboard/login.html')
+    return render(request, 'dashboard/registration/login.html')
 
 
 def signup(request):
-    return render(request, 'dashboard/signup.html')
+    return render(request, 'dashboard/registration/signup.html')
 
 
 def contactus(request):
