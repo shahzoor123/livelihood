@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36070e67-f48a-46b0-be66-a72650aa0efb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/livelihood/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/livelihood/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/templates/dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/dashboard/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +13,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="e1a051e8-ea1a-439c-a802-6ee0eec95872" />
+        <option name="url" value="https://github.com/shahzoor123/livelihood-project.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectId" id="26PfdCESSzaZu66YRn21yBtUiIV" />
   <component name="ProjectViewState">
