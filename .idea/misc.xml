@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (livelihood)" project-jdk-type="Python SDK" />
+=======
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.8 (livelihood-project)" project-jdk-type="Python SDK" />
+>>>>>>> dc545d07e31dce7f5e1a6752417fa694063dfdc5
 </project>

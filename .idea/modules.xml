@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
+      <module fileurl="file://$PROJECT_DIR$/.idea/livelihood.iml" filepath="$PROJECT_DIR$/.idea/livelihood.iml" />
+=======
       <module fileurl="file://$PROJECT_DIR$/.idea/livelihood-project.iml" filepath="$PROJECT_DIR$/.idea/livelihood-project.iml" />
+>>>>>>> dc545d07e31dce7f5e1a6752417fa694063dfdc5
     </modules>
   </component>
 </project>
