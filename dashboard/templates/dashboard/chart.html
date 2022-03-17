@@ -282,27 +282,27 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
+                <a href="{% url 'chart' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>ChartJS</p>
+                  <p>Project Growth</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
+                <a href="{% url 'chart' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Flot</p>
+                  <p>Poverty Project</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/inline.html" class="nav-link">
+                <a href="{% url 'chart' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Inline</p>
+                  <p>SME Project</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/uplot.html" class="nav-link">
+                <a href="{% url 'chart' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>uPlot</p>
+                  <p>Sub-Projects</p>
                 </a>
               </li>
             </ul>
@@ -459,8 +459,8 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">ChartJS</li>
+              <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+              <li class="breadcrumb-item active">Visualization</li>
             </ol>
           </div>
         </div>
@@ -473,9 +473,13 @@
         <div class="row">
           <div class="col-md-6">
             <!-- AREA CHART -->
-            <div class="card card-info">
-              <div>
+            <div class="card " style="background-color: #2F4F4F; color: #e6e6e6;">
+              <div class="card-header">
+                <h3 class="card-title">s1</h3>
 
+                <div class="card-tools">
+               
+                </div>
               </div>
               <div class="card-body" style="background-color: lavenderblush">
                 <div class="chart">
@@ -487,8 +491,14 @@
             <!-- /.card -->
 
             <!-- DONUT CHART -->
-            <div class="card card-danger">
-              
+            <div class="card " style="background-color: #2F4F4F; color: #e6e6e6;">
+              <div class="card-header">
+                <h3 class="card-title">s2</h3>
+
+                <div class="card-tools">
+               
+                </div>
+              </div>
               <div class="card-body" style="background-color: lavenderblush"> 
                 <canvas id="donutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
               </div>
@@ -497,9 +507,9 @@
             <!-- /.card -->
 
             <!-- PIE CHART -->
-            <div class="card " style="background-color: transparent;">
+            <div class="card " style="background-color: #2F4F4F; color: #e6e6e6;">
               <div class="card-header">
-                <h3 class="card-title">s1</h3>
+                <h3 class="card-title">s3</h3>
 
                 <div class="card-tools">
                
@@ -516,7 +526,14 @@
           <!-- /.col (LEFT) -->
           <div class="col-md-6">
             <!-- LINE CHART -->
-            <div class="card card-info">
+            <div class="card " style="background-color: #2F4F4F; color: #e6e6e6;">
+              <div class="card-header">
+                <h3 class="card-title">s4</h3>
+
+                <div class="card-tools">
+               
+                </div>
+              </div>
             
               <div class="card-body" style="background-color: lavenderblush">
                 <div class="chart">
@@ -528,7 +545,14 @@
             <!-- /.card -->
 
             <!-- BAR CHART -->
-            <div class="card card-success">
+            <div class="card " style="background-color: #2F4F4F; color: #e6e6e6;">
+              <div class="card-header">
+                <h3 class="card-title">s5</h3>
+
+                <div class="card-tools">
+               
+                </div>
+              </div>
              
               <div class="card-body" style="background-color: lavenderblush">
                 <div class="chart">
@@ -540,7 +564,14 @@
             <!-- /.card -->
 
             <!-- STACKED BAR CHART -->
-            <div class="card card-success">
+            <div class="card " style="background-color: #2F4F4F; color: #e6e6e6;">
+              <div class="card-header">
+                <h3 class="card-title" >s6</h3>
+
+                <div class="card-tools">
+               
+                </div>
+              </div>
              
               <div class="card-body" style="background-color: lavenderblush">
                 <div class="chart">
