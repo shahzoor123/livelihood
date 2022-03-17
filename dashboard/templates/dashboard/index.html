@@ -326,27 +326,27 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="pages/charts/chartjs.html" class="nav-link">
+                  <a href="{% url 'chart' %}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>ChartJS</p>
+                    <p>Project Growth</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/charts/flot.html" class="nav-link">
+                  <a href="{% url 'chart' %}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Flot</p>
+                    <p>Poverty Project</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/charts/inline.html" class="nav-link">
+                  <a href="{% url 'chart' %}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Inline</p>
+                    <p>SME Project</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/charts/uplot.html" class="nav-link">
+                  <a href="{% url 'chart' %}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>uPlot</p>
+                    <p>Sub-Projects</p>
                   </a>
                 </li>
               </ul>
@@ -914,8 +914,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item" ><a href="#" style="color: #d6a207;">Home</a></li>
-                <li class="breadcrumb-item active">Starter Page</li>
+                <li class="breadcrumb-item" ><a href="{% url 'index' %}" style="color: #d6a207;">Home</a></li>
+                <li class="breadcrumb-item active"><a href="{% url 'contactus' %}" style="color: #d6a207;">Contact us</a></li>
               </ol>
             </div><!-- /.col -->
           </div><!-- /.row -->
@@ -931,10 +931,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <div class="row">
             <div class="col-lg-3 col-6">
               <!-- small box -->
-              <div class="small-box bg-yellow">
+              <div href="{% url 'chart' %}" class="small-box bg-yellow">
                 <div class="inner">
                   <h5><b>Total Beneficiaries Of Project</b> </h5>
-
+                 
                   <h4>150</h4>
                 </div>
                 <div class="icon">
@@ -943,7 +943,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="icon">
 
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="{% url 'chart' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
             <!-- ./col -->
@@ -958,7 +958,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="icon">
                   <i style="font-size: 50px; margin-top: 30px;" class="ion ion-stats-bars"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="{% url 'chart' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
             <!-- ./col -->
@@ -974,7 +974,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                   <i style="font-size: 50px; margin-top: 30px;" class="ion ion-person-add"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="{% url 'chart' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
             <!-- ./col -->
@@ -990,7 +990,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                   <i style="font-size: 50px; margin-top: 30px;" class="ion ion-pie-graph"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="{% url 'chart' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
 
@@ -1005,7 +1005,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="icon">
                   <i style="font-size: 50px; margin-top: 30px;" class="ion ion-pie-graph"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="{% url 'chart' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
             <div class="col-lg-3 col-6">
@@ -1019,7 +1019,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="icon">
                   <i style="font-size: 50px; margin-top: 30px;" class="ion ion-pie-graph"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="{% url 'chart' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
             <div class="col-lg-3 col-6">
@@ -1033,7 +1033,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="icon">
                   <i style="font-size: 50px; margin-top: 30px;" class="ion ion-pie-graph"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="{% url 'chart' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
             <div class="col-lg-3 col-6">
@@ -1047,7 +1047,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="icon">
                   <i style="font-size: 50px; margin-top: 30px;" class="ion ion-pie-graph"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="{% url 'chart' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
 
@@ -1067,7 +1067,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="card-header">
                           <h3 class="card-title">
                             <i class="fas fa-chart-pie mr-1"></i>
-                            Sales
+                            Project Growth
                           </h3>
                           <div class="card-tools">
                             <ul class="nav nav-pills ml-auto">
