@@ -24,3 +24,7 @@ def search(request):
 
 def calender(request):
     return render(request, 'dashboard/calender.html')
+
+def chart(request):
+    return render(request, 'dashboard/chart.html')
+
