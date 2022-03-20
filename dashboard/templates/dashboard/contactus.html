@@ -18,6 +18,10 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}">
 
+  <link rel="stylesheet" href="{% static 'dist/css/style.css' %}">
+
+
+
   <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
 
   
@@ -134,7 +138,7 @@
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-bell"></i>
-          <span class="badge badge-warning navbar-badge">15</span>
+          <span class="badge badge-warning navbar-badge" style="background-color: #14c77c;">15</span>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <span class="dropdown-header">15 Notifications</span>
@@ -174,7 +178,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="{% url 'index'%}" class="brand-link">
       <img src="{% static 'dist/img/pakistan.png'%}" alt="" class="brand-image " style="opacity: .8">
       <span class="brand-text text-white "><b>BLEP Balochistan</b></span>
     </a>
@@ -458,119 +462,113 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
-              <li class="breadcrumb-item active">Contact us</li>
+              <li class="breadcrumb-item"><a href="{% url 'index' %}"style="color: #14c77c;">Home</a></li>
+              <li class="breadcrumb-item active" style="color: #14c77c;">Contact us</li>
             </ol>
           </div>
         </div>
       </div><!-- /.container-fluid -->
     </section>
 
-    <!-- Main content -->
-    <section class="content" style="align-items: center; background-color: #E6E6E6;" >
-
-      <!-- Default box -->
-      <div class="card" style="background-color: #2F4F4F; margin: 10px 100px 50px 100px;">
-        <div class="card-body row">
-          <div class=" text-center d-flex align-items-center justify-content-center">
-            <div>
-              
-                <!-- <a href="{% url 'index' %}"> <img style="width: 50px;" src="{% static 'dist/img/pakistan.png'%}" alt="" class="brand-image " style="opacity: .8">
-                  <span class="brand-text"><b></b></span><strong style="color: aliceblue;">BLEP Balochistan</strong></a> -->
-                <div class="col-sm-4 col-md-9 col-xs-12 col-lg-12" id='map' style='width:850px; height: 250px;   border-radius: 10px; align-items: center; '></div>
-                <script>
-                  mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhaHpvb3IiLCJhIjoiY2wwdzliNjc2MDhwZjNscWtwOWRmdWZnYSJ9.nm3POJbQ7pBDbB3Bfu8G7A';
-                const map = new mapboxgl.Map({
-                container: 'map',
-                style: 'mapbox://styles/mapbox/streets-v11',
-                center: [30.1798, 66.3451],
-                zoom: 1
-                });
-                 
-                map.on('load', () => {
-                map.addSource('route', {
-                'type': 'geojson',
-                'data': {
-                'type': 'Feature',
-                'properties': {},
-                'geometry': {
-                'type': 'LineString',
-                'coordinates': [
-                [30.3753, 69.3451],
-                [30.3753, 69.3451],
-                [30.3753, 69.3451],
-                [30.3753, 69.3451],
-                [30.3753, 69.3451],
-                [30.3753, 69.3451],
-                [30.3753, 69.3451],
-                [30.3753, 69.3451],
-                [30.3753, 69.3451],
-                [30.3753, 69.3451],
-                [30.3753, 69.3451],
-                [30.3753, 69.3451],
-                [30.3753, 69.3451],
-                [30.3753, 69.3451],
-                [30.3753, 69.3451],
-                [30.3753, 69.3451],
-                [30.3753, 69.3451],
-                [30.3753, 69.3451],
-                [30.3753, 69.3451],
-                [30.3753, 69.3451],
-                [30.3753, 69.3451]
-                ]
-                }
-                }
-                });
-                map.addLayer({
-                'id': 'route',
-                'type': 'line',
-                'source': 'route',
-                'layout': {
-                'line-join': 'round',
-                'line-cap': 'round'
-                },
-                'paint': {
-                'line-color': '#888',
-                'line-width': 8
-                }
-                });
-                });
-                </script>
- 
-                
-             
-              
-            </div>
-          </div>
-          <div  class="col-sm-12 col-xs-12 col-md-12 " style="color: #E6E6E6 ;" >
-            <div class="form-group"   >
-              <label for="inputName">Name</label>
-              <input style="background-color: #E6E6E6 ;" type="text" id="inputName" class="form-control" />
-            </div>
-            <div class="form-group">
-              <label for="inputEmail">E-Mail</label>
-              <input style="background-color: #E6E6E6 ;" type="email" id="inputEmail" class="form-control" />
-            </div>
-            <div class="form-group">
-              <label for="inputSubject">Subject</label>
-              <input style="background-color: #E6E6E6 ;" type="text" id="inputSubject" class="form-control" />
-            </div>
-            <div class="form-group">
-              <label for="inputMessage">Message</label>
-              <textarea style="background-color: #E6E6E6 ;" id="inputMessage" class="form-control" rows="4"></textarea>
-            </div>
-            <div class="form-group">
-              <input style="background-color: #E6E6E6 ;" type="submit" class="btn btn-muted" style="background-color: #FFC107;" value="Send message">
-            </div>
-          </div>
+   <section style="margin: 30px;">
+    <div class="card mb-3" style="background-color: #2F4F4F;">
+      <div class="card-body"  >
+        <div class="col-12 "  id='map' style='width:1200px; height: 350px; overflow: hidden;  border-radius: 10px; align-items: center; '></div>
+        <script>
+          mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhaHpvb3IiLCJhIjoiY2wwdzliNjc2MDhwZjNscWtwOWRmdWZnYSJ9.nm3POJbQ7pBDbB3Bfu8G7A';
+        const map = new mapboxgl.Map({
+          
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [67.0025, 30.2211],
+        zoom: 13.5
+        });
+         
+        map.on('load', () => {
+        map.addSource('route', {
+        'type': 'geojson',
+        'data': {
+        'type': 'Feature',
+        'properties': {},
+        'geometry': {
+        'type': 'LineString',
+        'coordinates': [
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451]
+        ]
+        }
+        }
+        });
+        const marker = new mapboxgl.Marker()
+            .setLngLat([67.0025, 30.2211])
+            .addTo(map); // add the marker to the map
+        map.addLayer({
+        'id': 'route',
+        'type': 'line',
+        'source': 'route',
+        'layout': {
+        'line-join': 'round',
+        'line-cap': 'round'
+        },
+        'paint': {
+        'line-color': '#888',
+        'line-width': 8
+        }
+        });
+        });
+        </script>
+      </div>
+      </div>
+      
+    <div class="card" style="background-color: #2F4F4F;" >
+      <div class="card-body" style="color: #E6E6E6 ;" >
+        <div class="form-group"   >
+          <label for="inputName">Name</label>
+          <input style="background-color: #E6E6E6 ;" type="text" id="inputName" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="inputEmail">E-Mail</label>
+          <input style="background-color: #E6E6E6 ;" type="email" id="inputEmail" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="inputSubject">Subject</label>
+          <input style="background-color: #E6E6E6 ;" type="text" id="inputSubject" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="inputMessage">Message</label>
+          <textarea style="background-color: #E6E6E6 ;" id="inputMessage" class="form-control" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+          <input style="background-color: #E6E6E6 ;" type="submit" class="btn btn-muted" style="background-color: #FFC107;" value="Send message">
         </div>
       </div>
-
-    </section>
-
     </div>
-    <!-- /.content -->
-  <!-- /.content-wrapper -->
+    </div>
+
+  </section> 
+  
+   
+
+   
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark" style="background-color: #E6E6E6;">
     <!-- Control sidebar content goes here -->
