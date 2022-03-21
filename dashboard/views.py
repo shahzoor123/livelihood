@@ -28,3 +28,7 @@ def calender(request):
 def chart(request):
     return render(request, 'dashboard/chart.html')
 
+
+def chart2(request):
+    return render(request, 'dashboard/chart2.html')    
+
