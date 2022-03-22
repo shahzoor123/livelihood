@@ -38,8 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'dashboard.apps.DashboardConfig',
-]
+    'dashboard.apps.DashboardConfig',]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -79,7 +78,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'BLEP',
         'USER': 'postgres',
-        'PASSWORD': 'admin',
+        'PASSWORD': 'Dearlala2@',
         'HOST': 'localhost',
 
     }
