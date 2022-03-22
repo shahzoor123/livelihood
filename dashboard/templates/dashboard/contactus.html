@@ -17,12 +17,22 @@
   <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'dist/css/style.css' %}">
+
+
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+
+  
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
 </head>
 <body class="hold-transition sidebar-mini">
-<div class="wrapper">
+<div class="wrapper" style="background-color: #E6E6E6;">
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="background-color: #cfcfcf;" >
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -43,7 +53,7 @@
     </ul>
 
     <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav ml-auto" >
       <!-- Navbar Search -->
       <li class="nav-item">
         <a class="nav-link" data-widget="navbar-search" href="#" role="button">
@@ -128,7 +138,7 @@
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-bell"></i>
-          <span class="badge badge-warning navbar-badge">15</span>
+          <span class="badge badge-warning navbar-badge" style="background-color: #14c77c;">15</span>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <span class="dropdown-header">15 Notifications</span>
@@ -168,7 +178,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="{% url 'index'%}" class="brand-link">
       <img src="{% static 'dist/img/pakistan.png'%}" alt="" class="brand-image " style="opacity: .8">
       <span class="brand-text text-white "><b>BLEP Balochistan</b></span>
     </a>
@@ -272,27 +282,27 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
+                <a href="{% url 'chart' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>ChartJS</p>
+                  <p>Project Growth</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
+                <a href="{% url 'chart' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Flot</p>
+                  <p>Poverty Project</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/inline.html" class="nav-link">
+                <a href="{% url 'chart' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Inline</p>
+                  <p>SME Project</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/uplot.html" class="nav-link">
+                <a href="{% url 'chart' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>uPlot</p>
+                  <p>Sub-Projects</p>
                 </a>
               </li>
             </ul>
@@ -405,7 +415,7 @@
           </li>
 
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="{% url 'calender' %}" class="nav-link">
               <i class="nav-icon fas fa-calendar-alt"></i>
               <p>
@@ -413,7 +423,7 @@
                 <span class="badge badge-info right">2</span>
               </p>
             </a>
-          </li>
+          </li> -->
 
         
    
@@ -442,7 +452,7 @@
 
 
    <!-- Content Wrapper. Contains page content -->
-   <div class="content-wrapper">
+   <div class="content-wrapper" style="align-items: center; background-color: #E6E6E6;">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -452,60 +462,115 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
-              <li class="breadcrumb-item active">Contact us</li>
+              <li class="breadcrumb-item"><a href="{% url 'index' %}"style="color: #14c77c;">Home</a></li>
+              <li class="breadcrumb-item active" style="color: #14c77c;">Contact us</li>
             </ol>
           </div>
         </div>
       </div><!-- /.container-fluid -->
     </section>
 
-    <!-- Main content -->
-    <section class="content" >
-
-      <!-- Default box -->
-      <div class="card" style="background-color: rgb(236, 235, 235)">
-        <div class="card-body row">
-          <div class="col-5 text-center d-flex align-items-center justify-content-center">
-            <div class="">
-              <div class="login-logo">
-                <a href="{% url 'index' %}"> <img style="width: 50px;" src="{% static 'dist/img/pakistan.png'%}" alt="" class="brand-image " style="opacity: .8">
-                    <span class="brand-text text-white "><b></b></span><strong>BLEP Balochistan</strong></a>
-              </div>
-              
-            </div>
-          </div>
-          <div  class="col-7">
-            <div class="form-group" ">
-              <label for="inputName">Name</label>
-              <input type="text" id="inputName" class="form-control" />
-            </div>
-            <div class="form-group">
-              <label for="inputEmail">E-Mail</label>
-              <input type="email" id="inputEmail" class="form-control" />
-            </div>
-            <div class="form-group">
-              <label for="inputSubject">Subject</label>
-              <input type="text" id="inputSubject" class="form-control" />
-            </div>
-            <div class="form-group">
-              <label for="inputMessage">Message</label>
-              <textarea id="inputMessage" class="form-control" rows="4"></textarea>
-            </div>
-            <div class="form-group">
-              <input type="submit" class="btn btn-primary" value="Send message">
-            </div>
-          </div>
+   <section style="margin: 30px;">
+    <div class="card mb-3" style="background-color: #2F4F4F;">
+      <div class="card-body"  >
+        <div class="col-12 "  id='map' style='width:1200px; height: 350px; overflow: hidden;  border-radius: 10px; align-items: center; '></div>
+        <script>
+          mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhaHpvb3IiLCJhIjoiY2wwdzliNjc2MDhwZjNscWtwOWRmdWZnYSJ9.nm3POJbQ7pBDbB3Bfu8G7A';
+        const map = new mapboxgl.Map({
+          
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [67.0025, 30.2211],
+        zoom: 13.5
+        });
+         
+        map.on('load', () => {
+        map.addSource('route', {
+        'type': 'geojson',
+        'data': {
+        'type': 'Feature',
+        'properties': {},
+        'geometry': {
+        'type': 'LineString',
+        'coordinates': [
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451],
+        [30.3753, 69.3451]
+        ]
+        }
+        }
+        });
+        const marker = new mapboxgl.Marker()
+            .setLngLat([67.0025, 30.2211])
+            .addTo(map); // add the marker to the map
+        map.addLayer({
+        'id': 'route',
+        'type': 'line',
+        'source': 'route',
+        'layout': {
+        'line-join': 'round',
+        'line-cap': 'round'
+        },
+        'paint': {
+        'line-color': '#888',
+        'line-width': 8
+        }
+        });
+        });
+        </script>
+      </div>
+      </div>
+      
+    <div class="card" style="background-color: #2F4F4F;" >
+      <div class="card-body" style="color: #E6E6E6 ;" >
+        <div class="form-group"   >
+          <label for="inputName">Name</label>
+          <input style="background-color: #E6E6E6 ;" type="text" id="inputName" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="inputEmail">E-Mail</label>
+          <input style="background-color: #E6E6E6 ;" type="email" id="inputEmail" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="inputSubject">Subject</label>
+          <input style="background-color: #E6E6E6 ;" type="text" id="inputSubject" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="inputMessage">Message</label>
+          <textarea style="background-color: #E6E6E6 ;" id="inputMessage" class="form-control" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+          <input style="background-color: #E6E6E6 ;" type="submit" class="btn btn-muted" style="background-color: #FFC107;" value="Send message">
         </div>
       </div>
-
-    </section>
-
     </div>
-    <!-- /.content -->
-  <!-- /.content-wrapper -->
+    </div>
+
+  </section> 
+  
+   
+
+   
   <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
+  <aside class="control-sidebar control-sidebar-dark" style="background-color: #E6E6E6;">
     <!-- Control sidebar content goes here -->
     <div class="p-3">
       <h5>Title</h5>
@@ -515,13 +580,13 @@
   <!-- /.control-sidebar -->
 
   <!-- Main Footer -->
-  <footer class="main-footer" style="background-color: #343A40;">
+  <footer class="main-footer"   style="background-color: #cfcfcf; text-align: center;">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
      
     </div>
     <!-- Default to the left -->
-    <strong style="color: azure;">Copyright &copy; 2022 <a style="color: rgb(255, 196, 0);" href="">Technigator</a>.  All rights reserved.</strong>
+    <strong style="color: #000000;">Copyright &copy; 2022 <a style="color: rgb(0, 0, 0);" href="">Technigator</a>.  All rights reserved.</strong>
   </footer>
 
 
