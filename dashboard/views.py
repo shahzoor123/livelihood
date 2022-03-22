@@ -21,6 +21,9 @@ def chart(request):
     return render(request, 'dashboard/chart.html')
 
 
-def chart2(request):
-    return render(request, 'dashboard/chart2.html')    
+def maps(request):
+    return render(request, 'dashboard/maps.html')    
+
+def test(request):
+    return render(request, 'dashboard/test.html')     
 

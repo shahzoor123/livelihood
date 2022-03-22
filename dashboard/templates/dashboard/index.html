@@ -201,7 +201,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <img src="{% static 'dist/img/user1-128x128.jpg' %}" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="{% url 'chart2' %}" class="d-block">Wahab khan</a>
+            <a href="#" class="d-block">Wahab khan</a>
           </div>
         </div>
 
@@ -352,6 +352,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <a href="{% url 'chart' %}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Sub-Projects</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{% url 'maps' %}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>By Area</p>
                   </a>
                 </li>
               </ul>
@@ -1076,8 +1082,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           </h3>
                           <div class="card-tools">
                             <ul class="nav nav-pills ml-auto">
-                              <li class="nav-item">
+                              <li class="nav-item" style="margin: 2px;">
                                 <a class="nav-link active "  style="background-color: #14c77c;" href="{% url 'chart' %}" >Visualize</a>
+                              </li>
+                              
+                              <li class="nav-item" style="margin: 2px;">
+                                <a class="nav-link active "  style="background-color: #14c77c;" href="{% url 'maps' %}" >By Area</a>
+                                
                               </li>
                               
                             </ul>

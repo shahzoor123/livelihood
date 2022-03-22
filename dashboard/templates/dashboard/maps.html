@@ -10,16 +10,11 @@
 
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
-  <link href="{% static 'dist/jqvmap.css' %}" media="screen" rel="stylesheet" type="text/css">
+  <link href="{% static 'dist/css/jqvmap.css' %}" media="screen" rel="stylesheet" type="text/css">
 
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-  
-
   <script type="text/javascript" src="{% static 'plugins/jqvmap/jquery.vmap.js' %}"></script>
-
-
- <script type="text/javascript" src="{% static 'plugins/jqvmap/maps/jquery.vmap.world.js' %}" charset="utf-8"></script>
+  <script type="text/javascript" src="{% static 'plugins/jqvmap/maps/jquery.vmap.world.js' %}" charset="utf-8"></script>
 
 
   <!-- Google Font: Source Sans Pro -->
@@ -28,12 +23,156 @@
   <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}">
-
   <script type="text/javascript">
     jQuery(document).ready(function() {
-      jQuery('#vmap').vectorMap({ map: 'world_en' });
+      jQuery('#vmap1').vectorMap({ map: 'world_en',
+    backgroundColor: '#343A40',
+    borderColor: '#818181',
+    borderOpacity: 0.25,
+    borderWidth: 1,
+    color: '#f4f3f0',
+    enableZoom: true,
+    hoverColor: '#c9dfaf',
+    hoverOpacity: null,
+    normalizeFunction: 'linear',
+    scaleColors: ['#b6d6ff', '#005ace'],
+    selectedColor: '#c9dfaf',
+    selectedRegions: null,
+    showTooltip: true,
+    onRegionClick: function(element, code, region)
+    {
+        var message = 'You clicked "'
+            + region
+            + '" which has the code: '
+            + code.toUpperCase();
+
+        alert(message);
+    }
+});
+      jQuery('#vmap2').vectorMap({ map: 'world_en',
+    backgroundColor: '#343A40',
+    borderColor: '#818181',
+    borderOpacity: 0.25,
+    borderWidth: 1,
+    color: '#f4f3f0',
+    enableZoom: true,
+    hoverColor: '#c9dfaf',
+    hoverOpacity: null,
+    normalizeFunction: 'linear',
+    scaleColors: ['#b6d6ff', '#005ace'],
+    selectedColor: '#c9dfaf',
+    selectedRegions: null,
+    showTooltip: true,
+    onRegionClick: function(element, code, region)
+    {
+        var message = 'You clicked "'
+            + region
+            + '" which has the code: '
+            + code.toUpperCase();
+
+        alert(message);
+    }
+});
+      jQuery('#vmap3').vectorMap({ map: 'world_en',
+    backgroundColor: '#343A40',
+    borderColor: '#818181',
+    borderOpacity: 0.25,
+    borderWidth: 1,
+    color: '#f4f3f0',
+    enableZoom: true,
+    hoverColor: '#c9dfaf',
+    hoverOpacity: null,
+    normalizeFunction: 'linear',
+    scaleColors: ['#b6d6ff', '#005ace'],
+    selectedColor: '#c9dfaf',
+    selectedRegions: null,
+    showTooltip: true,
+    onRegionClick: function(element, code, region)
+    {
+        var message = 'You clicked "'
+            + region
+            + '" which has the code: '
+            + code.toUpperCase();
+
+        alert(message);
+    }
+});
+      jQuery('#vmap4').vectorMap({  map: 'world_en',
+    backgroundColor: '#343A40',
+    borderColor: '#818181',
+    borderOpacity: 0.25,
+    borderWidth: 1,
+    color: '#f4f3f0',
+    enableZoom: true,
+    hoverColor: '#c9dfaf',
+    hoverOpacity: null,
+    normalizeFunction: 'linear',
+    scaleColors: ['#b6d6ff', '#005ace'],
+    selectedColor: '#c9dfaf',
+    selectedRegions: null,
+    showTooltip: true,
+    onRegionClick: function(element, code, region)
+    {
+        var message = 'You clicked "'
+            + region
+            + '" which has the code: '
+            + code.toUpperCase();
+
+        alert(message);
+    }
+});
+      jQuery('#vmap5').vectorMap({  map: 'world_en',
+    backgroundColor: '#343A40',
+    borderColor: '#818181',
+    borderOpacity: 0.25,
+    borderWidth: 1,
+    color: '#f4f3f0',
+    enableZoom: true,
+    hoverColor: '#c9dfaf',
+    hoverOpacity: null,
+    normalizeFunction: 'linear',
+    scaleColors: ['#b6d6ff', '#005ace'],
+    selectedColor: '#c9dfaf',
+    selectedRegions: null,
+    showTooltip: true,
+    onRegionClick: function(element, code, region)
+    {
+        var message = 'You clicked "'
+            + region
+            + '" which has the code: '
+            + code.toUpperCase();
+
+        alert(message);
+    }
+});
+      jQuery('#vmap').vectorMap({  map: 'world_en',
+    backgroundColor: '#343A40',
+    borderColor: '#818181',
+    borderOpacity: 0.25,
+    borderWidth: 1,
+    color: '#f4f3f0',
+    enableZoom: true,
+    hoverColor: '#c9dfaf',
+    hoverOpacity: null,
+    normalizeFunction: 'linear',
+    scaleColors: ['#b6d6ff', '#005ace'],
+    selectedColor: '#c9dfaf',
+    selectedRegions: null,
+    showTooltip: true,
+    onRegionClick: function(element, code, region)
+    {
+        var message = 'You clicked "'
+            + region
+            + '" which has the code: '
+            + code.toUpperCase();
+
+        alert(message);
+    }
+});
+      
     });
     </script>
+ 
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -478,19 +617,19 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-6">
             <!-- AREA CHART -->
             <div class="card " style="background-color: #2F4F4F; color: #e6e6e6;">
               <div class="card-header">
-                <h3 class="card-title">s1</h3>
+                <h3 class="card-title">Balochistan</h3>
 
                 <div class="card-tools">
                
                 </div>
               </div>
-              <div class="card-body" style="background-color: lavenderblush">
+              <div class="card-body" style="background-color: #c2c2c2;">
                 <div class="chart">
-                  <canvas id="areaChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                  <div class="col-12" id="vmap5" style="width: 1100px; height: 400px; border-radius: 3%; "></div>
                 </div>
               </div>
               <!-- /.card-body -->
@@ -500,14 +639,14 @@
             <!-- DONUT CHART -->
             <div class="card " style="background-color: #2F4F4F; color: #e6e6e6;">
               <div class="card-header">
-                <h3 class="card-title">s2</h3>
+                <h3 class="card-title">Chagai</h3>
 
                 <div class="card-tools">
                
                 </div>
               </div>
-              <div class="card-body" style="background-color: lavenderblush"> 
-                <canvas id="donutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+              <div class="card-body" style="background-color: #c2c2c2"> 
+                <div class="col-12" id="vmap4" style="width: 1100px; height: 400px; border-radius: 3%;"></div>
               </div>
               <!-- /.card-body -->
             </div>
@@ -516,14 +655,14 @@
             <!-- PIE CHART -->
             <div class="card " style="background-color: #2F4F4F; color: #e6e6e6;">
               <div class="card-header">
-                <h3 class="card-title">s3</h3>
+                <h3 class="card-title">Nushki</h3>
 
                 <div class="card-tools">
                
                 </div>
               </div>
-              <div class="card-body" style="background-color: lavenderblush">
-                <canvas id="pieChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+              <div class="card-body" style="background-color: #c2c2c2">
+                <div class="col-12" id="vmap3" style="width: 1100px; height: 400px; border-radius: 3%;"></div>
               </div>
               <!-- /.card-body -->
             </div>
@@ -531,20 +670,20 @@
 
           </div>
           <!-- /.col (LEFT) -->
-          <div class="col-md-12">
+          <div class="col-md-6">
             <!-- LINE CHART -->
             <div class="card " style="background-color: #2F4F4F; color: #e6e6e6;">
               <div class="card-header">
-                <h3 class="card-title">s4</h3>
+                <h3 class="card-title">Mastung</h3>
 
                 <div class="card-tools">
                
                 </div>
               </div>
             
-              <div class="card-body" style="background-color: lavenderblush">
+              <div class="card-body" style="background-color: #c2c2c2">
                 <div class="chart">
-                  <canvas id="lineChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                  <div class="col-12" id="vmap2" style="width: 1100px; height: 400px; border-radius: 3%;"></div>
                 </div>
               </div>
               <!-- /.card-body -->
@@ -554,16 +693,16 @@
             <!-- BAR CHART -->
             <div class="card " style="background-color: #2F4F4F; color: #e6e6e6;">
               <div class="card-header">
-                <h3 class="card-title">s5</h3>
+                <h3 class="card-title">Killa Abdullah</h3>
 
                 <div class="card-tools">
                
                 </div>
               </div>
              
-              <div class="card-body" style="background-color: lavenderblush">
+              <div class="card-body" style="background-color: #c2c2c2">
                 <div class="chart">
-                  <canvas id="barChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                  <div class="col-12" id="vmap" style="width: 1100px; height: 400px; border-radius: 3%;"></div>
                 </div>
               </div>
               <!-- /.card-body -->
@@ -573,17 +712,17 @@
             <!-- STACKED BAR CHART -->
             <div class="card " style="background-color: #2F4F4F; color: #e6e6e6;">
               <div class="card-header">
-                <h3 class="card-title" >s6</h3>
+                <h3 class="card-title" >Zhob</h3>
 
                 <div class="card-tools">
                
                 </div>
               </div>
              
-              <div class="card-body" style="background-color: lavenderblush">
+              <div class="card-body" style="background-color: #c2c2c2">
                 <div class="chart">
                  
-                    <div id="vmap" style="width: 600px; height: 400px;"></div>
+                    <div class="col-12" id="vmap1" style="width: 1100px; height: 400px; border-radius: 3%;"></div>
               <!-- /.card -->
                 </div>
               </div>
@@ -621,14 +760,12 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+<!-- <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script> -->
 <script src="{% static 'plugins/jquery-ui/jquery-ui.min.js' %}"></script>
-<script src="{% static 'plugins/jqvmap/jquery.vmap.min.js' %}"></script>
-<script src="{% static 'plugins/jqvmap/maps/jquery.vmap.usa.js' %}"></script>
+<!-- <script src="{% static 'plugins/jqvmap/jquery.vmap.min.js' %}"></script>
+<script src="{% static 'plugins/jqvmap/maps/jquery.vmap.usa.js' %}"></script> -->
 <script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 <script src="{% static 'dist/js/adminlte.min.js' %}"></script>
-<script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
-<script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 <script src="{% static 'plugins/jquery-knob/jquery.knob.min.js' %}"></script>
 <script src="{% static 'plugins/moment/moment.min.js' %}"></script>
 <script src="{% static 'plugins/daterangepicker/daterangepicker.js' %}"></script>
@@ -642,9 +779,11 @@
 
 <script src="{% static 'dist/js/pages/dashboard.js' %}"></script>
 
-<script>
-    $.widget.bridge('uibutton', $.ui.button)
-</script>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+    jQuery('#vmap').vectorMap({ map: 'world_en' });
+  });
+  </script>
 <!-- Page specific script -->
 <script>
   $(function () {
