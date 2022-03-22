@@ -6,14 +6,6 @@ def index(request):
     return render(request, 'dashboard/index.html')
 
 
-def login(request):
-    return render(request, 'dashboard/registration/login.html')
-
-
-def signup(request):
-    return render(request, 'dashboard/registration/signup.html')
-
-
 def contactus(request):
     return render(request, 'dashboard/contactus.html')
 
