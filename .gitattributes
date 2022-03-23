@@ -1,1 +1,3 @@
-*.html linguist-detectable=false
+javascript linguist-vendored=false
+*.html linguist-vendored=false
+ master
