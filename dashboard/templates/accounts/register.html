@@ -17,28 +17,51 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}">
 </head>
-<body class="hold-transition register-page">
+<body class="hold-transition register-page" style="background-color: #2F4F4F;">
 <div class="register-box">
   <div class="register-logo">
     <a href="{% url 'index' %}"> <img style="width: 50px;" src="{% static 'dist/img/pakistan.png'%}" alt="" class="brand-image " style="opacity: .8">
-      <span class="brand-text text-white "><b></b></span><b>BLEP Balochistan</b></a>
+      <span class="brand-text text-white "><b></b></span><b style="color: rgb(214, 214, 214); font-family: Arial, Helvetica, sans-serif;">BLEP Balochistan</b></a>
   </div>
 
-  <div class="card">
-    <div class="card-body register-card-body">
+  <div class="card" style=" border-radius: 5%; ">
+          <!--  Alerts -->
+    {% include 'accounts/messages.html' %}
+    <div class="card-body register-card-body" style="background-color: #2F4F4F; color: rgb(211, 211, 211); border-radius: 5%; box-shadow: 1px 1px 5px 1px#000000; ">
       <p class="login-box-msg">Register a new membership</p>
 
-      <form action="../../index.html" method="post">
+      <form action="{% url 'register' %}" method="POST">
+        {% csrf_token %}
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Full name">
+          <input type="text" class="form-control" name="first_name" placeholder="First Name" style="background-color: rgb(209, 209, 209);">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>
             </div>
           </div>
         </div>
+
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="text" class="form-control" name="last_name" placeholder="Last Name" style="background-color: rgb(209, 209, 209);">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" name="user_name" placeholder="User Name" style="background-color: rgb(209, 209, 209);">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="input-group mb-3">
+          <input type="email" name="email" class="form-control" placeholder="Email" style="background-color: rgb(209, 209, 209);">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -46,7 +69,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" name="password" class="form-control" placeholder="Password" style="background-color: rgb(209, 209, 209);">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -54,7 +77,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Retype password">
+          <input type="password" name="password2" class="form-control" placeholder="Retype password" style="background-color: rgb(209, 209, 209);">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -65,20 +88,20 @@
           <div class="col-8">
             <div class="icheck-primary">
               <input type="checkbox" id="agreeTerms" name="terms" value="agree">
-              <label for="agreeTerms">
-               I agree to the <a href="#">terms</a>
+              <label for="agreeTerms" >
+               I agree to the <a href="#" style=" color: rgb(206, 206, 206);">terms</a>
               </label>
             </div>
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Register</button>
+            <button type="submit" class="btn btn-block" style="background-color: rgb(209, 209, 209); color: rgb(0, 0, 0);">Register</button>
           </div>
           <!-- /.col -->
         </div>
       </form>
 
-      <div class="social-auth-links text-center">
+      <!-- <div class="social-auth-links text-center">
         <p>- OR -</p>
         <a href="#" class="btn btn-block btn-primary">
           <i class="fab fa-facebook mr-2"></i>
@@ -88,9 +111,9 @@
           <i class="fab fa-google-plus mr-2"></i>
           Sign up using Google+
         </a>
-      </div>
+      </div> -->
 
-      <a href="login.html" class="text-center">I already have a membership</a>
+      <a href="{% url 'logedin' %}" class="text-center" style=" color: rgb(206, 206, 206);">I have already registered</a>
     </div>
     <!-- /.form-box -->
   </div><!-- /.card -->

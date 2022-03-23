@@ -25,11 +25,19 @@ class  Role(models.Model):
 
 class School(models.Model):
     school_id = models.AutoField(primary_key=True)
-    # school_name = models.CharField(max_length=100, null=True)
+    school_name = models.CharField(max_length=100, null=True)
     no_of_students = models.IntegerField()
     no_of_girls = models.IntegerField()
     no_of_boys = models.IntegerField()
     add_user = models.ForeignKey(User, on_delete=models.SET_NULL , null =True)
+
+
+    def __str__(self):
+        return self.school_name
+
+  
+            
+        
  
 
 class District(models.Model):
@@ -39,7 +47,9 @@ class District(models.Model):
     add_school = models.ForeignKey(School, on_delete=models.SET_NULL , null =True)
     add_user = models.ForeignKey(User, on_delete=models.SET_NULL , null =True)
 
- 
+    def __str__(self):
+        return self.district_name
+         
    
 
   

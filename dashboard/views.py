@@ -6,14 +6,6 @@ def index(request):
     return render(request, 'dashboard/index.html')
 
 
-def login(request):
-    return render(request, 'dashboard/registration/login.html')
-
-
-def signup(request):
-    return render(request, 'dashboard/registration/signup.html')
-
-
 def contactus(request):
     return render(request, 'dashboard/contactus.html')
 
@@ -24,3 +16,14 @@ def search(request):
 
 def calender(request):
     return render(request, 'dashboard/calender.html')
+
+def chart(request):
+    return render(request, 'dashboard/chart.html')
+
+
+def maps(request):
+    return render(request, 'dashboard/maps.html')    
+
+def test(request):
+    return render(request, 'dashboard/test.html')     
+
