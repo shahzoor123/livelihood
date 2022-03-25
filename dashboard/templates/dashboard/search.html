@@ -191,7 +191,7 @@
           <img src="{% static 'dist/img/user1-128x128.jpg' %}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Wahab khan</a>
+          <a href="{% url 'profile' %}" class="d-block">Wahab khan</a>
         </div>
       </div>
 
@@ -312,83 +312,48 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
-                Forms
+                Record
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/forms/general.html" class="nav-link">
+                <a href="{% url 'forms' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>General Elements</p>
+                  <p>Poverty</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/forms/advanced.html" class="nav-link">
+                <a href="{% url 'forms' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Advanced Elements</p>
+                  <p>SME</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/forms/editors.html" class="nav-link">
+                <a href="{% url 'forms' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Editors</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/validation.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Validation</p>
+                  <p>Sub-indicators</p>
                 </a>
               </li>
             </ul>
           </li>
+          
+
+
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
-              <p>
-                Tables
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/tables/simple.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Simple Tables</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/tables/data.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>DataTables</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/tables/jsgrid.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>jsGrid</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-        
-          <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{% url 'forms' %}" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
               <p>
                 Users
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-
-            </ul>
-
-
-
-
           </li>
+
+
+
+
+       
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
@@ -399,13 +364,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/tables/simple.html" class="nav-link">
+                <a href="{% url 'forms' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Schools</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/tables/data.html" class="nav-link">
+                <a href="{% url 'forms' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Districts</p>
                 </a>
@@ -414,18 +379,36 @@
             </ul>
           </li>
 
-
-          <!-- <li class="nav-item">
-            <a href="{% url 'calender' %}" class="nav-link">
-              <i class="nav-icon fas fa-calendar-alt"></i>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
               <p>
-                Calendar
-                <span class="badge badge-info right">2</span>
+                Recorded
+                <i class="fas fa-angle-left right"></i>
               </p>
             </a>
-          </li> -->
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{% url 'records' %}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Districts</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{% url 'records' %}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>schools</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{% url 'records' %}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Businesses</p>
+                </a>
+              </li>
+            </ul>
+          </li>
 
-   
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-search"></i>
@@ -435,7 +418,12 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-        
+              <!-- <li class="nav-item">
+              <a href="pages/search/simple.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Simple Search</p>
+              </a>
+            </li> -->
               <li class="nav-item">
                 <a href="{% url 'search' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -444,6 +432,7 @@
               </li>
             </ul>
           </li>
+
         
     </div>
     <!-- /.sidebar -->
