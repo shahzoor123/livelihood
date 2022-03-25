@@ -27,3 +27,11 @@ def maps(request):
 def test(request):
     return render(request, 'dashboard/test.html')     
 
+def forms(request):
+    return render(request, 'dashboard/forms.html')
+
+def profile(request):
+    return render(request, 'dashboard/profile.html')
+
+def records(request):
+    return render(request, 'dashboard/records.html')            
