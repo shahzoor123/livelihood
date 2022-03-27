@@ -6,8 +6,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Log in</title>
-
+  <title>BLEP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarala&display=swap" rel="stylesheet">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -19,17 +21,17 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}">
 </head>
-<body class="hold-transition login-page" style="background-color: #2F4F4F;">
+<body class="hold-transition login-page" style="background-color: #343A40;">
 <div class="login-box">
   <div class="login-logo">
     <a href="{% url 'index' %}"> <img style="width: 50px;" src="{% static 'dist/img/pakistan.png'%}" alt="" class="brand-image " style="opacity: .8">
-        <span class="brand-text text-white "><b></b></span><b style="color: rgb(214, 214, 214); font-family: Arial, Helvetica, sans-serif;">BLEP Balochistan</b></a>
+        <span class="brand-text text-white "><b></b></span><b style="color: rgb(214, 214, 214); font-family: 'Sarala', sans-serif;">Blep Balochistan</b></a>
   </div>
   <!-- /.login-logo -->
-  <div class="card" style="border-radius: 5%;">
+  <div class="card" style="border-radius: 2%;">
     <!--  Alerts -->
     {% include 'accounts/messages.html' %}
-    <div class="card-body login-card-body" style="background-color: #2F4F4F; color: rgb(211, 211, 211); border-radius: 5%; box-shadow: 1px 1px 5px 1px#000000;  ">
+    <div class="card-body login-card-body" style="background-color: #343A40; color: rgb(211, 211, 211); border-radius: 2%; box-shadow: 1px 1px 5px 1px#000000;  ">
       <p class="login-box-msg">Sign in to start your session</p>
      
       <form action="{% url 'logedin' %}" method="POST">
