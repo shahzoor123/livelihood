@@ -1,3 +1,8 @@
-javascript linguist-vendored=false
-*.html linguist-vendored=false
- master
+*.html linguist-generated=true
+*.css linguist-generated=true
+*.sass linguist-generated=true
+*.scss linguist-generated=true
+*.js linguist-generated=true
+*.php linguist-generated=true
+*.PHP linguist-generated=true
+*.twig linguist-generated=true
